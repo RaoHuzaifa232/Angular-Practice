@@ -1,6 +1,10 @@
-<div class="flex justify-center bg-stone-500">
-  <div>
+<div class="flex justify-center bg-stone-500 p-3">
+  <div class="border-2 border-[#CCCCCC] p-3">
     <p>parent</p>
-    <div><child></child></div>
+    <!-- [data] is sending to child -->
+     <!-- (forParent)="recevingfromChild($event)" is receving form child -->
+    <div class="p-3 border-2 border-[#CCCCCC]">
+      <child [data]="'hello'" (forParent)="recevingfromChild($event)"></child>
+    </div>
   </div>
 </div>

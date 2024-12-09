@@ -10,5 +10,10 @@ import { ChildComponent } from "./child/child.component";
   styleUrl: './parent.component.scss'
 })
 export class ParentComponent {
+  parentData:any;
 
+  // Receving data from child
+  recevingfromChild(event:any) {
+    this.parentData = event;
+  }
 }
