@@ -1,5 +1,19 @@
-<div class="">
-  <h1>Data form parent component will show here</h1>
-  <!-- Showing data from parent-->
-  <div>{{data}}</div>
+<div>
+  <div class="text-base font-bold text-[#333333]">Data form parent component will show here
+    <!-- Showing data from parent-->
+    <div class="p-3 border-2 border-[#CCCCCC]">
+      <div class="text-[#333333]">{{data}}</div>
+      <div>
+        <!-- Button for sending data to parent -->
+        <button
+          type="button"
+          class="focus:outline-none bg-[#50E3C2] hover:bg-[#3DC4A6]  font-medium rounded-md text-sm text-[#333333] p-2"
+          (click)="sendingToParent()">
+          Send Data to Parent
+        </button>
+      </div>
+    </div>
+
+  </div>
+
 </div>

@@ -1,10 +1,17 @@
-<div class="flex justify-center bg-stone-500 p-3">
-  <div class="border-2 border-[#CCCCCC] p-3">
-    <p>parent</p>
-    <!-- [data] is sending to child -->
-     <!-- (forParent)="recevingfromChild($event)" is receving form child -->
-    <div class="p-3 border-2 border-[#CCCCCC]">
-      <child [data]="'hello'" (forParent)="recevingfromChild($event)"></child>
+<div class="flex justify-center bg-[#F4F4F4] p-3 text-[#333333]">
+  <div class="border-2 border-[#CCCCCC] p-3 text-[#333333]">
+    <p class="font-bold text-[#333333]">Parent</p>
+    <div class="flex gap-2">
+      <!-- Show child data through event Emitter -->
+      <div class="border-2 border-[#CCCCCC] p-3">
+        <div class="font-bold text-[#333333]">Child data through eventEmitter</div>
+        <div class="text-[#333333]">{{parentData}}</div>
+      </div>
+      <!-- [data] is sending to child -->
+      <!-- (forParent)="recevingfromChild($event)" is receving form child -->
+      <div class="p-3 border-2 border-[#CCCCCC] text-[#333333]">
+        <child [data]="'hello'" (forParent)="recevingfromChild($event)"></child>
+      </div>
     </div>
   </div>
 </div>
